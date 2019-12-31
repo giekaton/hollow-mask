@@ -7,7 +7,6 @@ Early development version.
 - Using the SVG editor, create better design for masks.
 
 <br/>
-<br/>
 
 ## Project setup
 ```

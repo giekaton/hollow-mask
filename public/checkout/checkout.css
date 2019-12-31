@@ -1,0 +1,562 @@
+
+    h1 {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    
+    #btn-checkout-disabled {
+      display: none;
+      margin: 0 auto;
+    }
+
+    .centered {
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+
+    .heading {
+      font-size: 32px;
+    }
+
+    #libraidenticon {
+      width: 140px;
+      height: 140px;
+      margin: 0 auto;
+      display: inline-block;
+    }
+
+    .my-code {
+      font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+      color:#2AAB51;
+      font-size:14px;
+      white-space: nowrap;
+      line-height: 150%;
+    }
+
+    .my-code-container {
+      max-width:90%;
+      max-width: 560px;
+      overflow-x: auto;
+      text-align:left;
+      padding:15px;
+      background-color:rgb(247, 247, 247);
+      margin: 0 auto;
+    }
+
+    #identicon-input {
+      width:100%;
+      padding:4px;
+      padding-left:14px;
+      padding-right:14px;
+      text-align:center;
+      padding-top: 6px;
+      border: 0;
+      border-bottom: 1px solid #42318C;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #identicon-input:focus {
+      outline: none;
+    }
+
+    .mono {
+      font-family: "SF Mono", "Monaco", "Andale Mono", "Lucida Console", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+      font-size: 12px;
+    }
+
+    #button-png:hover {
+      background-color:#f6ecff;
+    }
+
+    #button-t-shirt:hover {
+      background-color:#e9f5ff;
+    }
+    
+    /* text spinner */
+
+    .np-loading {
+      /* display: inline-block; */
+      overflow: hidden;
+      height: 1.3em;
+      margin-top: 65px;
+      line-height: 1.5em;
+      vertical-align: text-bottom;
+    }
+
+    .np-loading::after {
+      display: inline-table;
+      white-space: pre;
+      text-align: left;
+    }
+
+    .np-loading::after {
+      content: "\A.\A..\A...";
+      animation: spin4 1s steps(4) infinite;
+    }
+
+    .np-loading.np-line::after {
+      content: "/\A–\A\\\A|";
+      text-align: center;
+      animation: spin4 0.5s steps(4) infinite;
+    }
+
+    @keyframes spin1  { to { transform: translateY( -1.5em); } }
+    @keyframes spin2  { to { transform: translateY( -3.0em); } }
+    @keyframes spin3  { to { transform: translateY( -4.5em); } }
+    @keyframes spin4  { to { transform: translateY( -6.0em); } }
+    @keyframes spin5  { to { transform: translateY( -7.5em); } }
+    @keyframes spin6  { to { transform: translateY( -9.0em); } }
+    @keyframes spin7  { to { transform: translateY(-10.5em); } }
+    @keyframes spin8  { to { transform: translateY(-12.0em); } }
+    @keyframes spin9  { to { transform: translateY(-13.5em); } }
+    @keyframes spin10 { to { transform: translateY(-15.0em); } }
+    @keyframes spin11 { to { transform: translateY(-16.5em); } }
+    @keyframes spin12 { to { transform: translateY(-18.0em); } }
+
+
+    /* modal */
+
+    .np-modal-close {
+      position: absolute;
+      /* margin-top: -24px; */
+      right: 15px;
+      top: 10px;
+      color: rgb(216, 216, 216);
+      cursor: pointer;
+      font-size: 23px;
+      font-weight: bold;
+    }
+
+    .np-modal-close:hover {
+      color: white;
+    }
+
+    .np-modal-window {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0, 0.87);
+      overflow-x: hidden;
+      box-sizing: content-box;
+      align-items: center;
+      display: none;
+    }
+
+    .np-modal-content {
+      position: relative;
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+
+    .np-wallet {
+      padding: 10px;
+      max-width: 430px;
+      margin: 0 auto;
+      text-align: center;
+      clear: both;
+      padding-top: 30px;
+      background-color: white;
+      border-radius:5px;
+      margin-bottom: 20px;
+    }
+
+    .np-wallet-func {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 530px) {
+      .np-wallet {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+      .np-modal-close {
+        right: 10px;
+        top: 8px;
+      }
+    }
+
+    /* checkout */
+    input::-webkit-input-placeholder {
+      font-size: 14px;
+    }
+
+
+.slider-block {
+  display:inline;
+  vertical-align:middle;
+}
+
+.slider-block-label {
+  width: 60px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 74px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-label {
+  cursor:pointer;
+  vertical-align:bottom;
+  width:33%;
+  display:inline-block;
+  padding-bottom:3px;
+  font-size:15px;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: #ccc; */
+  background-color: #6A6A6A;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  /* background-color: #2196F3; */
+}
+
+input:focus + .slider {
+  /* box-shadow: 0 0 1px #2196F3; */
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(46px);
+  -ms-transform: translateX(46px);
+  transform: translateX(46px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  /* border-radius: 34px; */
+  border-radius: 5px;
+}
+
+.slider.round:before {
+  border-radius: 5px;
+}
+
+.input-basic {
+  font-size:14px;
+  height: 30px;
+  margin-bottom:8px;
+  width: 220px;
+}
+
+/* input[type=text] {
+  font-size:13px;
+} */
+
+
+.button-payment {
+  font-size: 16px;
+}
+
+
+/* stripe checkout - Vue component
+============================================ */
+
+.payment-container {
+  border: 2px solid #e0e0e0;
+  padding: 15px;
+  padding-top: 25px;
+  padding-bottom: 35px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  line-height: 130%;
+  float: left;
+}
+
+.checkout-component {
+  max-width: 360px;
+  margin: 0 auto;
+  background-color:#E9E9E9;
+  
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.payment-box {
+  clear:both;
+  margin-top:96px;
+}
+
+.switch-mobile {
+  display: none;
+}
+
+.checkout-component input, select {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  padding-left: 5px;
+}
+
+.checkout-component-heading {
+  background:#6a6a6a;
+  width:auto;
+  color:rgb(236, 236, 236);
+  font-size:15px;
+  padding:10px;
+  margin:0;
+  height:20px;
+  padding-top:11px;
+  /* text-align: left; */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+#identicon-tshirt {
+  width: 58px;
+  height: 57px;
+  position: absolute;
+  margin-left: 105px;
+  margin-top: -178px;
+}
+
+.dotted-line {
+  width: 100%;
+  margin-top: 3px;
+  margin-bottom: 6px;
+  border-bottom: 1px dotted #000000;
+}
+
+.input-basic {
+  width: 260px;
+}
+
+@media screen and (max-width: 360px) {
+  .input-basic {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .input-basic {
+    width: 240px;
+  }
+}
+
+.input-country {
+  width:269px;
+}
+
+@media screen and (max-width: 360px) {
+  .input-country {
+    width: 259px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .input-country {
+    width: 249px;
+  }
+}
+
+.select-product-data {
+  height: 22px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+.address-errors {
+  color: red;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+}
+
+.chekout-product-data {
+  max-width:360px;
+  height:28px;
+  font-size:14px;
+  font-weight:bold;
+  margin:0 auto;
+  border-bottom: 1px dashed #42318C;
+  color: black;
+  letter-spacing: 0.5px;
+}
+
+.checkout-mockup {
+  max-width:260px;
+  margin:0 auto;
+  border:1px solid #42318C;
+  border-radius:5px;
+}
+
+.expandable {
+  border-radius: 5px;
+  border: 1px dashed #42318C;
+  background-color: rgb(243, 240, 255);
+  max-width: 360px;
+  margin: 0 auto;
+  padding-top: 3px;
+  margin-bottom: 15px;
+}
+
+.expandable-details {
+  font-size:13px;
+  padding:15px;
+  margin-top: 10px;
+  text-align: left;
+  display: none;
+}
+
+.expandable-link {
+  height: 30px;
+}
+
+.expandable-link:hover {
+  background: rgb(247, 246, 255);
+  cursor:pointer;
+}
+
+/* .expandable:hover {
+  background: rgb(247, 246, 255);
+  cursor:pointer;
+} */
+
+.button-payment-disabled, .button-payment-disabled:hover {
+  /* padding: 10px 15px 10px 15px!important; */
+  background-color: #818181!important;
+  cursor: default!important;
+}
+
+/* CHECKBOX */
+/* Customize the label */
+.checkbox-div {
+  display: block;
+  position: relative;
+  padding-top: 2px;
+  /* cursor: pointer; */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  margin: 0 auto;
+  max-width: 275px;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-div input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  /* left: 0; */
+  height: 15px;
+  width: 15px;
+  background-color: rgb(247, 247, 247);
+  border: 1.5px solid grey;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-div input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-div .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 6px;
+  height: 9px;
+  border: solid rgb(53, 53, 53);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.active {
+  font-weight: bold;
+  color: #000!important;
+}
+
+.inactive {
+  color:#888888;
+}
+
+.hidden {
+  display:none;
+}
+
+
+button {
+  background-color: #1d2740;
+  border: none;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  /* font-family: 'Work Sans', sans-serif; */
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 12px 36px 12px 34px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #293656;
+}
+
+.pay-with-content {
+  height:164px;
+  vertical-align: middle;
+  padding: 20px;
+  padding-top: 40px;
+}

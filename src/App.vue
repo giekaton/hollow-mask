@@ -26,19 +26,19 @@
     </div>
 
     <div v-if="showAbout" id="hm-modal" class="np-modal-window" style="display:block;position:absolute;color:white;text-align:center;line-height:180%;">
-      <div style="max-width:500px;padding:15px;margin:0 auto;">
+      <div style="max-width:620px;padding:15px;margin:0 auto;">
+        <br><br>
+        <span style="color:#999;">WARNING: Early beta version. Design is unpolished and will look much better in the first public release.</span>
         <br><br>
         <b>About</b>
         <br><br>
-        Hollow Mask is an experimental art/engineering project that also has a t-shirt store.
+        Hollow Mask is an art + engineering project that also has a t-shirt store with your created hollow masks.
         <br><br>
-        <b>Early beta stage, unpolished!</b>
+        At Hollow Mask, you can generate more than 1 million unique masks, modify them and then save as an avatar, or order a t-shirt with the selected/modified mask.
         <br><br>
-        At Hollow Mask, users can generate more than 1 million unique masks, modify them and then save as an avatar, or order a t-shirt with the selected/modified mask.
+        Similar black t-shirts with white masks are popular all around the world, e.g. Marvel's The Punisher t-shirts, different t-shirts with skull symbolism and so on.
         <br><br>
-        Similar black t-shirts with white masks are popular all around the world. There are famous The Punisher's (from Marvel) t-shirts, different t-shirts with skull symbolism and so on.
-        <br><br>
-        Hollow Mask's origins lie at the fundamental nature of reality, which is emptiness. Not necessary horrifying, as in Edvard Munch's "The Scream", but it requires acknowledgment and acceptance. It can then be transformed into something more positive and meaningful.
+        Hollow Mask's origins lie at the fundamental nature of reality, which is emptiness. Not necessarily horrifying, as in Edvard Munch's "The Scream", but it requires acknowledgment and acceptance. It can then be transformed into something positive and meaningful.
         <br><br>
         <i style="font-size:14px;">
         "Paradox as it may seem, we likewise find life meaningful only when we have seen that it is without purpose, and know the ‘mystery of the universe’ only when we are convinced that we know nothing about it at all.''
@@ -46,7 +46,7 @@
         The Wisdom of Insecurity: A Message for an Age of Anxiety, Alan W. Watts
         </i>
         <br><br>
-        Hollow Mask is also a unique and experimental software project. Using initially designed graphic shapes, it automatically generates more than 1 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+        Hollow Mask is also a unique and experimental software project. Using initially designed graphical shapes, it automatically generates more than 1 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
         <br><br>
         <span @click="closeAbout()" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
         <div style="height:60px;"></div>

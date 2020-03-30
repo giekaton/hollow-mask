@@ -28,13 +28,13 @@
     <div v-if="showAbout" id="hm-modal" class="np-modal-window" style="display:block;position:absolute;color:white;text-align:center;line-height:180%;">
       <div style="max-width:620px;padding:15px;margin:0 auto;">
         <br><br>
-        <span style="color:#999;">WARNING: Early beta version. Design is unpolished and will look much better in the first public release.</span>
-        <br><br>
+        <!-- <span style="color:#999;">WARNING: Early beta version. Design is unpolished and will look much better in the first public release.</span>
+        <br><br> -->
         <b>About</b>
         <br><br>
-        Hollow Mask is an art + engineering project that also has a t-shirt store with your created hollow masks.
+        Hollow Mask is an art + engineering project that also has a t-shirt store.
         <br><br>
-        At Hollow Mask, you can generate more than 1 million unique masks, modify them and then save as an avatar, or order a t-shirt with the selected/modified mask.
+        At Hollow Mask, you can generate more than 4 million unique masks, modify them and then save as an avatar, or order a t-shirt with the selected/modified mask.
         <br><br>
         Similar black t-shirts with white masks are popular all around the world, e.g. Marvel's The Punisher t-shirts, different t-shirts with skull symbolism and so on.
         <br><br>
@@ -46,7 +46,7 @@
         The Wisdom of Insecurity: A Message for an Age of Anxiety, Alan W. Watts
         </i>
         <br><br>
-        Hollow Mask is also a unique and experimental software project. Using initially designed graphical shapes, it automatically generates more than 1 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+        Hollow Mask is also a unique and experimental software project. Using initially designed graphical shapes, it automatically generates more than 4 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
         <br><br>
         <span @click="closeAbout()" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
         <div style="height:60px;"></div>
@@ -83,87 +83,17 @@ export default {
     openAbout: function() {
       this.showAbout = true;
       document.getElementsByTagName("BODY")[0].style.overflowY = 'hidden';
+      this.$router.push({ name: 'about'});
     },
     closeAbout: function() {
       this.showAbout = false;
       document.getElementsByTagName("BODY")[0].style.overflowY = 'auto';
+      this.$router.push({ name: 'home'});
     },
     leaderboard: function() {
-      console.log('eee');
+      // console.log('eee');
     },
-    hmModalClick: function() {
-      let self = this;
-      this.hmModal = !this.hmModal;
-      if (this.hmModal) {
-        
-      let xhr = new XMLHttpRequest();
-
-      xhr.onload = function () {
-
-        if (xhr.status >= 200 && xhr.status < 300) {
-          npData = xhr.response;
-          npData = JSON.parse(npData);
-
-          self.masksHtml = '<span style="font-size:14px;">';
-          self.ownersHtml = '';
-
-          // npData[1].sort();
-
-          let sortable = [];
-          for (let maskId in npData[1]) {
-            sortable.push([maskId, npData[1][maskId]]);
-          }
-
-          sortable.sort(function(a, b) {
-              return a[1] - b[1];
-          });
-
-          // npData[1] = sortable;
-
-          sortable.reverse();
-
-          sortable.forEach(mask => {
-            self.masksHtml += '<a href="/'+mask[0]+'" style="color:white;" target="_blank">'+mask[0]+'</a> ('+mask[1]+'0 NIM)<br>';
-          })
-
-          // for (let key in npData[1]){
-          //   // self.masksHtml += '<a href="https://hollowmask.com/'+key+'" style="color:white;" target="_blank">'+key+'</a> ('+npData[1][key]+'0 NIM)<br>';
-          //   self.masksHtml += '<a href="/'+key+'" style="color:white;" target="_blank">'+key+'</a> ('+npData[1][key]+'0 NIM)<br>';
-          // }
-
-          self.masksHtml += '</span>';
-
-          // npData[0].reverse();
-
-          npData[0] = npData[0].sort((a, b) => (a.items < b.items) ? 1 : -1)
-
-          for (let i = 0; i < npData[0].length; i++) { 
-            self.ownersHtml += '<div style="vertical-align:middle;"><img style="vertical-align:middle;display:inline;width:20px;" src="https://icons.mopsus.com/icon/'+npData[0][i].address.replace(/\s/g, '')+'.png"> <span style="font-size:14px;">'+npData[0][i].label+' ('+npData[0][i].items+')</span><br></div>';
-          }
-        } 
-        else {
-          console.log('The request failed!');
-        }
-
-      };
-
-      xhr.open('GET', 'nimipay.php?action=npGetData');
-      xhr.send();
-
-
-
-        
-
-        
-
-        // function npGetUserIndex(address) {
-        //   for(let i = 0; i < npData.users.length; i += 1) {
-        //     if (npData.users[i].address == address) { return i; }
-        //   }
-        // }    
-
-      }
-    }
+    
   }
 }
 </script>
@@ -191,6 +121,9 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  .noselect {
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;

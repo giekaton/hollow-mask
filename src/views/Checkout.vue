@@ -279,6 +279,4 @@ export default {
     a, a:hover, a:visited, a:active {
       color: #6393c1;
     }
-
-
 </style>

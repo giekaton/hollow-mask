@@ -18,13 +18,14 @@ function npOpenModal() {
   divShow('np-modal');
 
   var svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-  svg.setAttribute("viewBox","0 0 303.04 303.04");
-  // svg.setAttribute("width","156");
+  svg.setAttribute("viewBox","0 0 400 400");
+  svg.setAttribute("width","140");
   svg.classList.add("mockup-svg");
   svg.id = "mockup-svg";
 
   var maskHead = getById('mask-head');
   var maskHeadClone = maskHead.cloneNode();
+  maskHeadClone.style.fill = '#fffffffa';
   svg.appendChild(maskHeadClone);
 
   var maskEyes = getById('mask-eyes');

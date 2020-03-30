@@ -175,7 +175,7 @@
       margin-bottom: 20px;
     }
 
-    @media screen and (max-width: 530px) {
+    @media screen and (max-width: 490px) {
       .np-wallet {
         margin-left: 10px;
         margin-right: 10px;

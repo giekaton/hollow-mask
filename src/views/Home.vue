@@ -12,10 +12,10 @@
     <div style="height:30px;"></div>
 
     <div class="buttons noselect">
-      <div @click="maskGenerateStart()" class="button">
+      <div @click="maskGenerateStart()" title="New (N)" class="button">
         New
       </div>
-      <div @click="maskExport()" class="button">
+      <div @click="maskExport()" class="button" title="Save as PNG" >
         <span v-if="!avatarGenerating">Save</span>
         <span v-else>Wait...</span>
       </div>
@@ -24,13 +24,13 @@
           Link
         </router-link>
       </div>
-      <div v-if="!maskEditing" @click="maskEdit()" class="button">
+      <div v-if="!maskEditing" @click="maskEdit()" class="button" title="Shapes editor">
         Edit
       </div>
       <div v-else @click="maskEditEnd()" class="button">
         ✕
       </div>
-      <div @click="npOpenModal()" class="button">
+      <div @click="npOpenModal()" class="button" title="Order a t-shirt">
         Wear
       </div>
     </div>
@@ -293,7 +293,7 @@ export default {
         nose:
           '<path id="mask-nose" class="svg-path" fill="black" d="M193.635 227.126c-1.136,3.712 -7.212,22.688 -4.283,25.479 2.735,2.606 15.655,3.509 19.258,2.111 5.555,-2.155 3.663,-7.471 2.733,-11.841 -1.047,-4.918 -2.962,-9.904 -4.403,-14.776 -5.86,-15.21 -7.822,-18.924 -13.305,-0.973z"/>',
         mouth:
-          '<path id="mask-eyes" class="svg-mouth" fill="black" d="M184.713 308.843c10.013,-0.099 20.026,-0.199 30.039,-0.298 12.009,-0.118 13.646,-0.571 13.181,-11.424 -0.544,-12.672 -1.83,-15.883 -7.806,-17.29 -10.217,-2.405 -34.238,-3.172 -41.967,2.986 -2.335,1.859 -2.944,5.137 -3.743,12.963 -1.042,10.206 -0.577,13.17 10.296,13.063z"/>'
+          '<path id="mask-mouth" class="svg-mouth" fill="black" d="M184.713 308.843c10.013,-0.099 20.026,-0.199 30.039,-0.298 12.009,-0.118 13.646,-0.571 13.181,-11.424 -0.544,-12.672 -1.83,-15.883 -7.806,-17.29 -10.217,-2.405 -34.238,-3.172 -41.967,2.986 -2.335,1.859 -2.944,5.137 -3.743,12.963 -1.042,10.206 -0.577,13.17 10.296,13.063z"/>'
       },
 
       mask8: {
@@ -332,7 +332,8 @@ export default {
           middleLeft:
             "0.068,-0.048 0.137,-0.097 0.204,-0.146 39.778,-28.55 -54.349,-25.241 -71.973,-19.394 -16.07,-21.484 -5.585,-29.374 10.228,-33.779 7.016,-1.954 14.266,-3.081 21.395,-4.349 2.928,-0.521 6.21,-0.879 8.858,-1.622 2.267,-0.637 3.024,-2.075 4.793,-8.089 2.823,-9.593 1.758,-22.688 -0.494,-24.458l-0.234 -0.184 0 -0.087c-0.004,0 -0.006,-0.003 -0.006,-0.006z"
         },
-        eyes: '<path id="mask-eyes" class="svg-path" fill="black" d="M147.686 163.526c-4.233,2.805 -9.46,10.389 -8.617,18.773 1.974,19.629 26.46,29.844 40.037,12.155 12.841,-16.729 -13.335,-42.911 -31.42,-30.928zm108.897 5.427c7.29,11.139 3.565,27.151 -9.33,32.556 -11.667,4.891 -25.041,-3.511 -28.668,-17.617 -6.195,-24.102 29.341,-28.168 37.998,-14.939z"/>',
+        eyes: 
+          '<path id="mask-eyes" class="svg-path" fill="black" d="M147.686 163.526c-4.233,2.805 -9.46,10.389 -8.617,18.773 1.974,19.629 26.46,29.844 40.037,12.155 12.841,-16.729 -13.335,-42.911 -31.42,-30.928zm108.897 5.427c7.29,11.139 3.565,27.151 -9.33,32.556 -11.667,4.891 -25.041,-3.511 -28.668,-17.617 -6.195,-24.102 29.341,-28.168 37.998,-14.939z"/>',
         nose:
           '<path id="mask-nose" class="svg-path" fill="black" d="M214.2 232.741c2,9.229 2.253,13.999 -0.041,16.974 -2.266,2.938 -7,4.144 -17.782,3.374 -7.768,-0.554 -13.418,-4.063 -11.787,-16.826 0.9,-7.051 4.283,-17.964 9.966,-22.711 10.163,-8.49 17.25,12.009 19.644,19.189z"/>',
         mouth:
@@ -464,7 +465,7 @@ export default {
         .saveSvgAsPng(
           document.getElementById("svg-mask"),
           "hollowmask-" + this.maskId + ".png",
-          { scale: 3, width: 400, height: 400 }
+          { scale: 3, width: 400, height: 400, backgroundColor: 'black' }
         )
         .then(e => {
           this.avatarGenerating = false;
@@ -1074,6 +1075,22 @@ export default {
   },
 
   mounted() {
+
+
+    document.onkeydown = (evt) => {
+      evt = evt || window.event;
+      var isN = false;
+      if ("key" in evt) {
+        isN = (evt.key === "n" || evt.key === "N");
+      } else {
+        isN = (evt.keyCode === 78);
+      }
+      if (isN) {
+        this.maskGenerateStart();
+      }
+    };
+
+
     console.log(this.$route.name)
     if (this.$route.name == 'success') {
       this.maskGenerate();

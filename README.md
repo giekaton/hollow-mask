@@ -1,10 +1,6 @@
 # Hollow Mask
 
-Early development version.
-
-@todo:
-- Finish the SVG editor.
-- Using the SVG editor, create better design for masks.
+Version 0.0.9-beta. Description is coming soon.
 
 <br/>
 

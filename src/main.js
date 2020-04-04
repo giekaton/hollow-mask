@@ -11,7 +11,7 @@ Object.defineProperty(Vue.prototype, 'saveSvgAsPng', { value: saveSvgAsPng });
 router.beforeEach((to, from, next) => {
   // console.log(to);
   if (to.name == 'mask') {
-    document.title = 'Hollow Mask ID: ' + to.params.maskId;
+    document.title = 'Hollow Mask ID: ' + to.params.maskId + ' - Hollow Mask Maker';
     next();
   }
   else {

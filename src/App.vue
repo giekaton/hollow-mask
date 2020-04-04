@@ -26,31 +26,42 @@
     </div>
 
     <div v-if="showAbout" id="hm-modal" class="np-modal-window" style="display:block;position:absolute;color:white;text-align:center;line-height:180%;">
-      <div style="max-width:620px;padding:15px;margin:0 auto;">
+      <div style="max-width:620px;padding:10px;margin:0 auto;font-size:15.5">
+
+        <h1>About</h1>
+
+        The Hollow Mask Maker is a tool that allows you to generate and customize unique mask-based avatars.
         <br><br>
-        <!-- <span style="color:#999;">WARNING: Early beta version. Design is unpolished and will look much better in the first public release.</span>
-        <br><br> -->
-        <b>About</b>
+        In total, you can generate 4,782,969 unique masks, and then use any of them as an avatar, or order a cool black t-shirt with the selected/modified mask.
         <br><br>
-        Hollow Mask is an art + engineering project that also has a t-shirt store.
-        <br><br>
-        At Hollow Mask, you can generate more than 4 million unique masks, modify them and then save as an avatar, or order a t-shirt with the selected/modified mask.
-        <br><br>
-        Similar black t-shirts with white masks are popular all around the world, e.g. Marvel's The Punisher t-shirts, different t-shirts with skull symbolism and so on.
-        <br><br>
-        Hollow Mask's origins lie at the fundamental nature of reality, which is emptiness. Not necessarily horrifying, as in Edvard Munch's "The Scream", but it requires acknowledgment and acceptance. It can then be transformed into something positive and meaningful.
+        Each generated avatar is free for your personal or commercial use. Where possible, please credit the https://hollowmask.com website.
+
+        <h1>Hollow Mask origins</h1>
+
+        Hollow Mask's origins lie at the fundamental nature of reality, which is emptiness. This emptiness can be scary, even terrifying. It's a place where we lose our everyday roles and see the reality without subjective stories we tell ourselves and others. This existential emptiness requires our acknowledgment and acceptance. It can then be transformed into something meaningful and positive.
         <br><br>
         <i style="font-size:14px;">
-        "Paradox as it may seem, we likewise find life meaningful only when we have seen that it is without purpose, and know the ‘mystery of the universe’ only when we are convinced that we know nothing about it at all.''
+        "Paradox as it may seem, we likewise find life meaningful only when we have seen that it is without purpose, and know the ‘mystery of the universe’ only when we are convinced that we know nothing about it at all."
         <br>
-        The Wisdom of Insecurity: A Message for an Age of Anxiety, Alan W. Watts
+        – Alan W. Watts, The Wisdom of Insecurity
         </i>
         <br><br>
-        Hollow Mask is also a unique and experimental software project. Using initially designed graphical shapes, it automatically generates more than 4 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+        Different artists, from different centuries and places, universally acknowledge the existence of this existential emptiness. Probably the strongest imagery we all know is The Scream, a painting created by Norwegian Expressionist artist Edvard Munch in 1893. The same screaming expression has also influenced the modern Ghostface mask, and now, on our mobile devices, we all have the emojicon representing The Scream, which is both cute and terrifying at the same time.
         <br><br>
-        <span @click="closeAbout()" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
+        Inspired by the cool black Marvel's The Punisher t-shirts, Hollow Mask has also a t-shirt store, where you can order a good quality t-shirt with any mask you prefer.
+        <br><br>
+        On the technical side, Hollow Mask is a unique and experimental open-source software project. Using initially designed graphical shapes, the special algorithm automatically generates more than 4 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+
+        <h1>Contacts</h1>
+
+        h&#105;&#64;&#x68;&#x6f;&#x6c;l&#111;&#119;&#x6d;&#x61;&#x73;k&#46;&#99;&#x6f;&#x6d;
+        <div style="height:8px;"></div>
+        <a href="https://twitter.com/hollowmaskcom" target="_blank" class="text-link">Twitter</a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/giekaton/hollow-mask" target="_blank" class="text-link">GitHub</a>
+        <br>
+        <br><br>
+        <span @click="closeAbout()" class="text-link">Close</span>
         <div style="height:60px;"></div>
-        <div class="np-top-owners" v-html="masksHtml"></div>
+
 
         <span @click="closeAbout()">
           <div class="btn-about-close">✕</div>
@@ -99,6 +110,18 @@ export default {
 </script>
 
 <style>
+  h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .text-link {
+    color:#999999;
+    text-decoration:underline;
+    cursor:pointer;
+  }
 
   .np-btn {
     background-color: #e4e4e4!important;

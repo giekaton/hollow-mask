@@ -19,25 +19,24 @@ export default new Router({
           path: '/about',
           name: 'about',
           component: Home,
-          meta: {title: 'About - Hollow Mask Maker & Editor | Mask Avatars & T-Shirts'}
+          meta: {title: 'About - Hollow Mask Avatar Generator & Editor'}
         },
         {
           path: '/payment-success',
           name: 'success',
+          meta: {title: 'Hollow Mask T-Shirt - Payment Success'},
           component: Home
         },
         {
           path: '/payment-declined',
           name: 'declined',
-          meta: {title: 'Hollow Mask Maker - Avatar Creator'},
+          meta: {title: 'Hollow Mask T-Shirt - Payment Declined'},
           component: Home
         },
         {
           path: '/:maskId',
           name: 'mask',
-          // meta: (route) => ({ title: 'Hollow Mask ID: ' + route.params.maskId }),
-          
-          // meta: ({ title: 'Hollow Mask ID: ' }),
+          // route's title is dynamically controlled in main.js
           component: Home
         }
       ]

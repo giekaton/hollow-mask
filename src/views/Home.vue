@@ -370,10 +370,7 @@ export default {
       this.mask += this.html1;
 
       random = this.getRandomInt();
-
-      // freeze
       // random = "mask5";
-
       this.mask += this[random].head.top;
 
       this.mask += "0.088c";
@@ -389,14 +386,13 @@ export default {
 
       this.mask += "0.088c";
 
+      random = this.getRandomInt();
       this.mask += this[random].head.middleLeft;
 
       this.mask += this.html2;
 
-      // freeze (eyes) pt1
-      // random = "mask7";
-
       random = this.getRandomInt();
+      // random = "mask7";
       this.mask += this[random].eyes;
 
       random = this.getRandomInt();
@@ -404,8 +400,6 @@ export default {
 
       random = this.getRandomInt();
       this.mask += this[random].mouth;
-
-      let self = this;
     },
     maskGenerateSpec: function(maskId) {
       this.mask = "";
@@ -415,9 +409,9 @@ export default {
       this.mask += this.html1;
 
       let middle = "";
+
       let random = "mask" + maskId[0];
       // console.log(random);
-
       this.mask += this[random].head.top;
 
       this.mask += "0.088c";
@@ -432,6 +426,7 @@ export default {
 
       this.mask += "0.088c";
 
+      random = "mask" + maskId[3];
       this.mask += this[random].head.middleLeft;
 
 
@@ -439,13 +434,13 @@ export default {
 
       // console.log(this.mask);
 
-      random = "mask" + maskId[3];
+      random = "mask" + maskId[4];
       this.mask += this[random].eyes;
 
-      random = "mask" + maskId[4];
+      random = "mask" + maskId[5];
       this.mask += this[random].nose;
 
-      random = "mask" + maskId[5];
+      random = "mask" + maskId[6];
       this.mask += this[random].mouth;
     },
     getRandomInt: function() {

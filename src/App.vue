@@ -7,7 +7,7 @@
         Successful payment. Thank you for shopping.
         <br>
         <br>
-        <span @click="success = false" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
+        <span @click="closePS()" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
       </div>
     </div>
 
@@ -17,7 +17,7 @@
         Your payment was declined. Please double check the data you have entered or try another card.
         <br>
         <br>
-        <span @click="declined = false" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
+        <span @click="closePD()" style="color:#999999;text-decoration:underline;cursor:pointer;">Close</span>
       </div>
     </div>
 
@@ -32,9 +32,9 @@
 
         The Hollow Mask Maker is a tool that allows you to generate and customize unique mask-based avatars.
         <br><br>
-        In total, you can generate 4,782,969 unique masks, and then use any of them as an avatar, or order a cool black t-shirt with the selected/modified mask.
+        In total, you can generate 4,782,969 unique masks. Use any of them as an avatar, as a social profile picture, or order a black t-shirt with the selected/modified mask.
         <br><br>
-        Each generated avatar is free for your personal or commercial use. Where possible, please credit the https://hollowmask.com website.
+        Each generated avatar is free for your personal or commercial use. Where possible, you can mention the hollowmask.com website.
 
         <h1>Hollow Mask origins</h1>
 
@@ -48,9 +48,9 @@
         <br><br>
         Different artists, from different centuries and places, universally acknowledge the existence of this existential emptiness. Probably the strongest imagery we all know is The Scream, a painting created by Norwegian Expressionist artist Edvard Munch in 1893. The same screaming expression has also influenced the modern Ghostface mask, and now, on our mobile devices, we all have the emojicon representing The Scream, which is both cute and terrifying at the same time.
         <br><br>
-        Inspired by the cool black Marvel's The Punisher t-shirts, Hollow Mask has also a t-shirt store, where you can order a good quality t-shirt with any mask you prefer.
+        Inspired by the Marvel's The Punisher t-shirts, Hollow Mask also has a t-shirt store, where you can order cool black t-shirts with high quality Hollow Mask prints.
         <br><br>
-        On the technical side, Hollow Mask is a unique and experimental open-source software project. Using initially designed graphical shapes, the special algorithm automatically generates more than 4 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+        On the technical side, Hollow Mask is a unique and experimental open-source design/engineering project. Using initially designed graphical shapes, the special algorithm automatically generates more than 4 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
 
         <h1>Contacts</h1>
 
@@ -99,6 +99,14 @@ export default {
     closeAbout: function() {
       this.showAbout = false;
       document.getElementsByTagName("BODY")[0].style.overflowY = 'auto';
+      this.$router.push({ name: 'home'});
+    },
+    closePS: function() {
+      this.success = false; 
+      this.$router.push({ name: 'home'});
+    },
+    closePD: function() {
+      this.declined = false; 
       this.$router.push({ name: 'home'});
     },
     leaderboard: function() {

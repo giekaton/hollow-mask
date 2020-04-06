@@ -112,7 +112,7 @@ export default {
       mask: "",
       maskId: "",
 
-      svg_start: '<svg id="svg-mask" viewBox="0 0 400 400"><polygon xmlns="http://www.w3.org/2000/svg" fill="black" points="0,0 400,0 400,400 0,400 "/>',
+      svg_start: '<svg id="svg-mask" viewBox="0 0 400 400"><polygon fill="black" points="0,0 400,0 400,400 0,400 "/>',
 
       html1: '<path class="svg-path" id="mask-head" fill="white" d="',
       html2: '" style="fill:#ffffff;fill-rule:evenodd"/><g id="svg-wireframe"></g>',
@@ -370,23 +370,26 @@ export default {
       this.mask += this.html1;
 
       random = this.getRandomInt();
-      // random = "mask5";
+      // random = "mask9";
       this.mask += this[random].head.top;
 
       this.mask += "0.088c";
 
       random = this.getRandomInt();
       // middle = random;
+      // random = 'mask9';
       this.mask += this[random].head.middleRight;
 
       this.mask += "0.088c";
 
       random = this.getRandomInt();
+      // random = 'mask9';
       this.mask += this[random].head.bottom;
 
       this.mask += "0.088c";
 
       random = this.getRandomInt();
+      // random = 'mask7';
       this.mask += this[random].head.middleLeft;
 
       this.mask += this.html2;

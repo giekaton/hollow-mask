@@ -32,7 +32,7 @@
 
         The Hollow Mask Maker is a tool that allows you to generate and customize unique mask-based avatars.
         <br><br>
-        In total, you can generate 4,782,969 unique masks. Use any of them as an avatar, as a social profile picture, or order a black t-shirt with the selected/modified mask.
+        In total, you can generate 10,000,000 unique masks. Use any of them as an avatar, as a social profile picture, or order a black t-shirt with the selected/modified mask.
         <br><br>
         Each generated avatar is free for your personal or commercial use. Where possible, you can mention the hollowmask.com website.
 
@@ -50,7 +50,7 @@
         <br><br>
         Inspired by the Marvel's The Punisher t-shirts, Hollow Mask also has a t-shirt store, where you can order cool black t-shirts with high quality Hollow Mask prints.
         <br><br>
-        On the technical side, Hollow Mask is a unique and experimental open-source design/engineering project. Using initially designed graphical shapes, the special algorithm automatically generates more than 4 million mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+        On the technical side, Hollow Mask is a unique and experimental open-source design/engineering project. Using initially designed graphical shapes, the special algorithm automatically generates 10 million unique mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
 
         <h1>Contacts</h1>
 

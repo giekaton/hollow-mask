@@ -11,12 +11,16 @@ The total amount of unique avatars: 10^7 = 10,000,000
 Every avatar is associated with a string of 7 integers (range: 0000000 - 9999999).
 
 To generate a random avatar:
-`obj = hollowMask()
+```
+obj = hollowMask()
 maskSvgCode = obj.mask
-maskId = obj.maskId`
+maskId = obj.maskId
+```
 
 To generate a specific avatar:
-`maskSvgCode = hollowMask('4898125')`
+```
+maskSvgCode = hollowMask('4898125')
+```
 
 <br/>
 

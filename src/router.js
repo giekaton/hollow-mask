@@ -13,13 +13,13 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      meta: {title: 'Hollow Mask Maker - Avatar Creator'},
+      meta: {title: 'Hollow Mask Maker - Avatar Creator, Masks Generator & Editor'},
       children: [
         {
           path: '/about',
           name: 'about',
           component: Home,
-          meta: {title: 'About - Hollow Mask Avatar Generator & Editor'}
+          meta: {title: 'About - 10 Million Unique Hollow Mask Avatars'}
         },
         {
           path: '/payment-success',

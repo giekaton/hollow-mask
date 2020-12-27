@@ -140,7 +140,8 @@ export default {
       this.$parent.openAbout();
     }
     else if (typeof this.$route.params.maskId != "undefined") {
-      this.maskGenerateSingle(this.$route.params.maskId);
+      this.maskId = this.$route.params.maskId;
+      this.maskGenerateSingle(this.maskId);
     } 
     else {
       this.maskGenerateSingle();

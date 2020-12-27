@@ -219,7 +219,7 @@ function coinbaseBuyProceed(orderFinal) {
       console.log('The request failed!');
     }
   };  
-  xhr.open('GET', homeUrl+'/checkout/server_hm.php?action=coinbase&data='+orderFinal);
+  xhr.open('GET', homeUrl+'/checkout/_hm/server.php?action=coinbase&data='+orderFinal);
   xhr.send();
   
 }
@@ -259,7 +259,7 @@ function stripeBuyProceed(orderFinal) {
     }
   };
 
-  xhr.open('GET', homeUrl+'/checkout/server_hm.php?action=stripe&data='+orderFinal);
+  xhr.open('GET', homeUrl+'/checkout/_hm/server.php?action=stripe&data='+orderFinal);
   xhr.send();
 
 }

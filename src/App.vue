@@ -30,11 +30,11 @@
 
         <h1>About</h1>
 
-        The Hollow Mask Maker is a tool that allows you to generate and customize unique mask-based avatars.
+        The Hollow Mask avatar maker is a web-app that allows you to generate and customize unique mask-based avatars.
         <br><br>
-        In total, you can generate 10,000,000 unique masks. Use any of them as an avatar, as a social profile picture, or order a black t-shirt with the selected/modified mask.
+        In total, you can generate 10,000,000 unique masks. You can use any of them as an avatar, a social profile picture, a gaming logo, or order a black t-shirt with the selected/modified mask.
         <br><br>
-        Each generated avatar is free for your personal or commercial use. Where possible, you can mention the hollowmask.com website.
+        Each generated mask avatar is free for your personal or commercial use.
 
         <h1>Hollow Mask origins</h1>
 
@@ -48,9 +48,9 @@
         <br><br>
         Different artists, from different centuries and places, universally acknowledge the existence of this existential emptiness. Probably the strongest imagery we all know is The Scream, a painting created by Norwegian Expressionist artist Edvard Munch in 1893. The same screaming expression has also influenced the modern Ghostface mask, and now, on our mobile devices, we all have the emojicon representing The Scream, which is both cute and terrifying at the same time.
         <br><br>
-        Inspired by the Marvel's The Punisher t-shirts, Hollow Mask also has a t-shirt store, where you can order cool black t-shirts with high quality Hollow Mask prints.
+        Inspired by the Marvel's The Punisher t-shirts, Hollow Mask also offers cool black t-shirts with high quality Hollow Mask avatar prints of your choice.
         <br><br>
-        On the technical side, Hollow Mask is a unique and experimental open-source design/engineering project. Using initially designed graphical shapes, the special algorithm automatically generates 10 million unique mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
+        From a technical point of view, Hollow Mask is a unique and experimental open-source design/engineering project. Using initially designed graphical shapes, the Hollow Mask algorithm automatically generates 10 million unique mask combinations. Additional tools, such as vector editing in the browser, are already live in their early beta stage.
 
         <h1>Contacts</h1>
 
